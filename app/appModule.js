@@ -1,41 +1,21 @@
-var Stations = angular.module('Stations', ['ngCookies',
-    'ngResource',
-    'ngSanitize',
-    'ngRoute',
-    'google-maps'])
+var Stations = angular.module('Stations', ['ngRoute']);
+// Add Google maps dans les crochets, comme ngRoute, après téléchargement et import dans index!
 
-
-
-;
-
-Stations.config(functioNn ($routeProvider) {
+Stations.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: '../index.html',
         controller: ''
       })
-      .when('/itineraire', {
-        templateUrl: 'views/itin.html',
-        controller: ''
-      })
       .when('/stations', {
-        templateUrl: 'views/stations.html',
+        templateUrl: '/views/stations.html',
         controller: 'StationCtrl'
-      })
-      .when('/info', {
-        templateUrl: 'views/hotel.html',
-        controller: ''
-      })
-      .when('/statistiques', {
-        templateUrl: 'views/findHotel.html',
-        controller: ''
       })
       .otherwise({
         templateUrl: 'views/404.html',
         controller: ''
       });
 });
-
 
 Stations.filter('ago',function(){
 	return function(timestamp){

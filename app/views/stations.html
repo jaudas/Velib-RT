@@ -12,21 +12,20 @@
     <title>Vélib'RT - Vélib en temps réel</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- FONT AWESOME CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-
+    
     <!-- Custom CSS -->
-    <link href="../assets/css/nav-bar.css" rel="stylesheet">
-    <link href="../assets/css/footer.css" rel="stylesheet">
+    <link href="../../assets/css/nav-bar.css" rel="stylesheet">
+    <link href="../../assets/css/footer.css" rel="stylesheet">
 
-    <link href="../assets/css/main.css" rel="stylesheet">
-    <link href="../assets/css/station.css" rel="stylesheet">
+    <link href="../../assets/css/main.css" rel="stylesheet">
+    <link href="../../assets/css/station.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!--[if lt IE 9]>
@@ -36,45 +35,11 @@
 
 </head>
 
-<body>
+<body ng-app="Stations">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="../index.html"><i class="fa fa-bicycle"></i> Vélib'RT</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="itin.html">Itinéraire</a>
-                    </li>
-                    <li>
-                        <a href="">Stations</a>
-                    </li>
-                    <li>
-                        <a href="statistiques.html">Statistiques</a>
-                    </li>
-                    <li>
-                        <a href="info.html">Informations</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <ng-include src="'../views/navbar.html'"></ng-include>
 
-
-        <div class = "cadre" ng-app="Stations" ng-controller="StationsCtrl">
+        <div class = "cadre"  ng-controller="StationCtrl">
             <h1> Les stations </h1>
 
             <div class= "contenu" infinite-scroll="loadMore()" infinite-scroll-distance='2'>
@@ -189,22 +154,25 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="../assets/js/jquery.js"></script>
+    <script src="../../assets/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
 
     <!-- Angular JS -->
-    <script src="../assets/js/angular.min.js" type="text/javascript" ></script>
+    <script src="../../assets/js/angular.min.js" type="text/javascript" ></script>
+    <script src="../../assets/js/angular-route.js"></script>
 
     <!-- Other JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-    <script src="../assets/js/moment.js" type="text/javascript" ></script>
+    <script src="../../assets/js/moment.js" type="text/javascript" ></script>
 
 
     <!-- Mon JS -->
-    <script src = "appModule.js" type="text/javascript"></script>
-    <script src = "StationCtrl.js" type="text/javascript"></script>
+    <script src = "../appModule.js" type="text/javascript"></script>
+    <script src = "../scripts/StationCtrl.js" type="text/javascript"></script>
+
+
+
 
 </body>
 

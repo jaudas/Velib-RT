@@ -2,7 +2,6 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +13,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- FONT AWESOME CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
 
     <!-- Custom CSS -->
     <link href="assets/css/footer.css" rel="stylesheet">
@@ -22,7 +21,6 @@
     <link href="assets/css/main.css" rel="stylesheet">
 
     <link href="assets/css/landing.css" rel="stylesheet">
-
 
     <!-- Custom Fonts -->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,11 +31,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
-<body>
+<body ng-app="Stations" >
 
-    <ng-include src="app/views/navbar.html"></ng-include>
+    <ng-include src="'app/views/navbar.html'"></ng-include>
 
 
     <!-- Header -->
@@ -58,7 +57,7 @@
                                 <a href="" class="btn btn-default btn-lg"><i class="fa fa-map"></i> Trouver un itinéraire </span></a>
                             </li>
                             <li>
-                                <a href="app/stations.html" class="btn btn-default btn-lg"><i class="fa fa-map"></i> Trouver une station </span></a>
+                                <a href="/stations" class="btn btn-default btn-lg"><i class="fa fa-map"></i> Trouver une station </span></a>
                             </li>
 
                         </ul>
@@ -144,6 +143,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-route.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="app/appModule.js"></script>
+    <script src="app/scripts/StationCtrl.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
-Stations.controller("StationsCtrl", function($scope, $http){
+Stations.controller("StationCtrl", function($scope, $http){
 
 	var SERVEUR_URL = "https://api.jcdecaux.com/vls/v1/";
 	var KEY = "?contract=paris&apiKey=ab975d2ef885d1f727d9ec4f5fddde86881c077c"; // Clé personnelle permettant d'utiliser les jeux de données. 
