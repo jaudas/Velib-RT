@@ -1,0 +1,49 @@
+<div class = "cadre"  ng-controller="MapCtrl">
+  <h1> Détail de la station </h1>
+
+  <div class="stationUnit">
+    <div class="col-md-6 ">
+      <span class="name">Name :  {{stationDetails.name}}</span>  
+
+      <span ng-show="stationDetails.bonus==true" title ="Station fermée" style="color:red; text-align : center">
+        <br>FERMEE </span>
+
+
+        <span id = "star" ng-show="stationDetails.bonus==true" title ="Station Bonus" >
+          <i class="fa fa-star"></i> </span>
+
+        <span class ="bikes"> 
+
+          <span ng-show="stationDetails.banking==true" title ="Terminal de paiement" >
+            <i class="fa fa-credit-card" style ="color : grey"></i> </span>
+
+
+          <span ng-class ="{true:'unvailable', false:'available'}[stationDetails.available_bikes==0]" title ="Vélos disponibles à la station" >
+          {{stationDetails.available_bikes}}     <i class="fa fa-bicycle"></i> </span>
+
+          <span ng-class ="{true:'unvailable', false:'available'}[stationDetails.available_bike_stands==0]" title ="Places disponibles" >
+                  {{stationDetails.available_bike_stands}} <i class="fa fa-unlock-alt"></i></span>
+
+        </span>
+
+
+        <div class="address"> <br>{{stationDetails.address}}</div>
+
+
+        <div class="address"> latitude : {{stationDetails.position.lat}}</div> 
+        <div class="address"> longitude : {{stationDetails.position.lng}} <br></div> 
+
+
+      </div>
+
+
+      <div class="col-md-6 " id = "map-cavas">
+    
+      </div>
+
+
+  </div>
+
+
+
+</div>

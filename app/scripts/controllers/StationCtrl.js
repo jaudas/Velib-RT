@@ -1,7 +1,6 @@
 Stations.controller("StationCtrl", function($scope, $http){
 
-	var SERVEUR_URL = "https://api.jcdecaux.com/vls/v1/";
-	var KEY = "?contract=paris&apiKey=ab975d2ef885d1f727d9ec4f5fddde86881c077c"; // Clé personnelle permettant d'utiliser les jeux de données. 
+	var SERVEUR_URL = "https://api.jcdecaux.com/vls/v1/stations?contract=paris&apiKey=ab975d2ef885d1f727d9ec4f5fddde86881c077c"; // Clé personnelle permettant d'utiliser les jeux de données. 
 
 	$scope.stations = [];
 	$scope.isLoading = false;
@@ -12,7 +11,7 @@ Stations.controller("StationCtrl", function($scope, $http){
 	{
 		console.info("getting stations");
 		$scope.isLoading =true;
-		$http.get(SERVEUR_URL+"stations"+KEY)
+		$http.get(SERVEUR_URL)
 		.success(function(data,status)
 		{
 			$scope.stations=data;
@@ -28,7 +27,9 @@ Stations.controller("StationCtrl", function($scope, $http){
 	}
 
 
-	getStations();
 
+
+
+	getStations();
 });
 

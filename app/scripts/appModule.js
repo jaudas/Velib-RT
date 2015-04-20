@@ -4,15 +4,19 @@ var Stations = angular.module('Stations', ['ngRoute']);
 Stations.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '../index.html',
+        templateUrl: 'app/views/main.html',
         controller: ''
       })
       .when('/stations', {
-        templateUrl: '/views/stations.html',
+        templateUrl: 'app/views/stations.html',
         controller: 'StationCtrl'
       })
+      .when('/details/:id', {
+        templateUrl: 'app/views/details.html',
+        controller: 'MapCtrl'
+      })
       .otherwise({
-        templateUrl: 'views/404.html',
+        templateUrl: 'app/views/404.html',
         controller: ''
       });
 });
