@@ -1,0 +1,141 @@
+
+
+.cadre{
+	background-color: #00897B;
+}
+
+
+
+#stationsDiv{
+    background-color: #00897B;
+
+
+    padding-bottom: 100px;
+}
+
+
+
+
+.contenu #formulaireListe{
+	background-color: white;
+	border-radius: 3px;
+	margin-bottom: 30px;
+
+	padding: 10px 10px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20);
+
+
+}
+
+
+.stationUnit{
+	border-radius: 3px;
+	background-color: white;
+
+	margin-bottom: 15px;
+	padding: 10px 10px;
+
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20);
+
+}
+
+.formInput{
+	font-size: 14px;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+
+	margin-bottom: 20px;
+	
+	border : none;
+	border-bottom:1px solid #757575;
+}
+
+.formInput:focus{
+	 outline:none; 
+}
+
+
+
+
+.address{
+	font-style: italic;
+	text-transform: lowercase;
+
+}
+.bikes{
+	float: right;
+
+}
+
+#star{
+	color : yellow; 
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.available{
+	color : green;
+	margin-left: 10px;
+
+}
+.unvailable{
+	color : red;
+	margin-left: 10px;
+
+}
+
+.btn-floating {
+	background-color: black !important;
+	float: right;
+	width:25px;
+	line-height: 25px;
+	height: 25px;
+}
+.btn-floating i{
+
+	line-height: 25px;
+
+}
+
+
+
+
+
+@media(max-width:800px) {
+
+
+	#stationsDiv{
+    background-color: #00897B;
+    padding-bottom: 10px;
+    }
+
+    .formInput{
+    	width: 95%;
+    	margin-left: 2%;
+    	margin-right: 2%;
+    	margin-bottom: 10px;
+    }
+}
+
+
+
+}
+
+
+
+@media(max-width:480px) {
+
+
+	#stationsDiv{
+    background-color: #00897B;
+    padding-bottom: 60px;
+    }
+
+    .formInput{
+    	width: 95%;
+    	margin-left: 2%;
+    	margin-right: 2%;
+    	margin-bottom: 5px;
+    }
+
+
+}

@@ -1,0 +1,76 @@
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+}
+
+.cadre{
+	padding-top: 100px;
+	padding-bottom: 30px;
+}
+
+
+.cadre h1{
+	color :white;
+	text-align: center;
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px black;
+    padding-bottom: 60px;
+}
+
+
+
+.contenu{
+
+	border-radius: 2px;
+	margin-right: 20%;
+	margin-left: 20%;
+
+}
+
+
+@media(max-width:480px) {
+	.cadre{
+		padding-top: 80px;
+		padding-bottom: 20px;
+
+	}
+
+	.cadre h1{
+		padding-bottom: 20px;
+
+	}
+
+	.contenu{
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+
+
+}
+
+
+
+@media(max-width:800px) {
+	.cadre{
+		padding-top: 50px;
+		padding-bottom: 10px;
+
+	}
+	.cadre h1{
+		padding-bottom: 50px;
+
+	}
+
+	.contenu{
+		margin-right: 10%;
+		margin-left: 10%;
+	}
+}
+
+
+
+
+
+
