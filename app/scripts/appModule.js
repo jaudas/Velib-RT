@@ -1,4 +1,4 @@
-var Stations = angular.module('Stations', ['ngRoute']);
+var Stations = angular.module('Stations', ['ngRoute', 'uiGmapgoogle-maps']);
 // Add Google maps dans les crochets, comme ngRoute, après téléchargement et import dans index!
 
 Stations.config(function ($routeProvider) {

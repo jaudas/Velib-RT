@@ -116,6 +116,7 @@
 
 }
 
+.angular-google-map-container { height: 400px; }
 
 @media(max-width:800px) {
 

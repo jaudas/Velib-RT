@@ -9,15 +9,15 @@ Stations.controller('MapCtrl', function($scope, $http,$routeParams) {
 
 
 	$scope.map = {
-		center: {
-			latitude: 43.45,
+		center : {
+			latitude: 43,
 			longitude: 4
 		},
 		coords: {
 			latitude: 0,
 			longitude: 0
 		},
-		zoom: 7,
+		zoom: 15,
 		options: {
 			disableDoubleClickZoom:true,
 			draggableCursor:'move',
@@ -25,13 +25,13 @@ Stations.controller('MapCtrl', function($scope, $http,$routeParams) {
 			keyboardShortcuts:false,
 			streetViewControl:false
 		}
-	}
+	};
 
 	$scope.marker = {
 		coords: {
 			latitude: 0,
 			longitude: 0
-		}
+		},
 	};
 
 
@@ -45,10 +45,25 @@ Stations.controller('MapCtrl', function($scope, $http,$routeParams) {
     		$scope.stationDetails=data;
     		$scope.status=status;
     		$scope.isLoading = false;
-    		
-    		//centrage de la map
-    		$scope.map.center = $scope.stationDetails.position;
-    		$scope.map.coords = $scope.stationDetails.position;
+
+    		$scope.map = {
+    			center : {
+    				latitude: $scope.stationDetails.position.lat,
+    				longitude: $scope.stationDetails.position.lng
+    			},
+    			coords: {
+    				latitude: $scope.stationDetails.position.lat,
+    				longitude: $scope.stationDetails.position.lng
+    			}
+    		};
+
+    		$scope.marker = {
+    			id : $scope.stationDetails.number,
+    			coords: {
+    				latitude: $scope.stationDetails.position.lat,
+    				longitude: $scope.stationDetails.position.lng
+    		}
+    	}
     	})
     	.error(function(data,status)
     	{
