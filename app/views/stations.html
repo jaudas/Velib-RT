@@ -3,15 +3,23 @@
     <h1> Les stations </h1>
         <p> <i class="fa fa-search"></i>  Recherche </p>
 
-        <div id = "formulaireListe" >
+        <div class="row" id = "formulaireListe" >
+
+          <div class="col-md-6 " id ="saisie">
             <form>
               <input class="formInput" type="text" placeholder = "Name search " ng-model="search.name">
-              <input class="formInput" type="text" placeholder = "Address search search " ng-model="search.address">
-
-
-
+              <input class="formInput" type="text" placeholder = "Address search " ng-model="search.address">
+              <input type="checkbox" ng-model="search.status" ng-checked="status == 'OPEN'" > Station Ouvertes uniquement</br/>
+       
 
             </form>
+          </div>
+
+          <div class="col-md-6 ">
+ 
+          </div>
+
+
 
         </div>  
 
@@ -19,12 +27,12 @@
 
         <p> Les stations :</p>
 
-        <div class ="stationUnit" ng-repeat = "station in stations |limitTo:50 | filter : search" >
+        <div class ="stationUnit" ng-repeat = "station in stations | limitTo:50 | filter : search  " >
 
-          <span class="name">Name :  {{station.name}}</span>  
+          <span class="name">Name :  {{station.name}}</span>
 
-          <span ng-show="station.bonus==true" title ="Station fermée" style="color:red">
-                    FERMEE </span>
+          <span ng-show="station.status=='CLOSED'" title ="Station fermée" style="color:red">
+                    <i class="fa fa-exclamation"></i>FERMEE </span>
 
           
            <span id = "star" ng-show="station.bonus==true" title ="Station Bonus" >

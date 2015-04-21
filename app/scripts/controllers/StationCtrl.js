@@ -26,7 +26,9 @@ Stations.controller("StationCtrl", function($scope, $http){
 		})
 	}
 
-
+	$scope.setFalse = function(){
+    $scope.checkboxValue = false;
+}
 
 
 
