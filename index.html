@@ -8,26 +8,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="icon" href="assets/img/RT.ico">
+
     <title>Vélib'RT - Vélib en temps réel</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- FONT AWESOME CSS -->
-    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
     <link href="assets/css/footer.css" rel="stylesheet">
     <link href="assets/css/nav-bar.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
-
+    <link href="assets/css/main.css" rel="stylesheet"> 
     <link href="assets/css/landing.css" rel="stylesheet">
-
     <link href="assets/css/station.css" rel="stylesheet">
+    <link href="assets/css/stats.css" rel="stylesheet">
 
 
 
-    <!-- Custom Fonts -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Google Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!--[if lt IE 9]>
@@ -35,51 +36,56 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-
 </head>
 
-<body ng-app="Stations">
-<div class = "global">
+<body ng-app="Stations"> <!--Déclaration de l'APP -->
 
-    <ng-include src="'app/views/navbar.html'"></ng-include>
-
-
-    
-
-    <!--  Content -->
-
-    <div  ng-view=""></div>
+    <div class = "global"> <!--Contient l'ensemble du site -->
 
 
+        <!--Appel à la navbar -->
+        <ng-include src="'app/views/navbar.html'"></ng-include>
 
-    <!-- Footer -->
-    <ng-include src="'app/views/footer.html'"></ng-include>
-</div>
+        <!--  Contenu  -->
+        <div  ng-view=""></div>
+
+        <!-- Footer -->
+        <ng-include src="'app/views/footer.html'"></ng-include>
+
+    </div>
 
 
+    <!-- SCRIPTS -->
 
     <!-- jQuery -->
     <script src="assets/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 
-    <script src="assets/js/jquery.js"></script>
+    <!-- Angular  -->
     <script src="assets/js/angular.js"></script>
     <script src="assets/js/angular-route.js"></script>
 
+
+    <!-- Google Maps API  -->
     <script src='assets/js/lodash.js'></script>
     <script src='assets/js/angular-google-maps.min.js'></script>
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 
-    <script src="assets/js/bootstrap.js"></script>
+    <!-- Divers JS -->
     <script src="assets/js/moment.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
+    <!-- Module Angular  -->
     <script src="app/scripts/appModule.js"></script>
 
+    <!-- Controlleurs  -->
     <script src="app/scripts/controllers/StationCtrl.js"></script>
     <script src="app/scripts/controllers/MapsCtrl.js"></script>
+    <script src="app/scripts/controllers/ItinCtrl.js"></script>
+    <script src="app/scripts/controllers/StatsCtrl.js"></script>
 
 
 </body>

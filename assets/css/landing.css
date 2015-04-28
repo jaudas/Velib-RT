@@ -23,8 +23,9 @@ html {
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+
 }
 
 .intro-message > h1 {
@@ -144,7 +145,7 @@ html {
     }
 
     .banner {
-    background: url(../img/l/banner-xl.jpg) no-repeat center center;
+    background: url(../img/lg/banner-xl.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -178,3 +179,79 @@ body, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
 }
+
+
+
+
+#containerLanding{
+    width: auto;
+    margin: 0px;
+    padding: 2%;
+
+}
+
+.cadreLanding{
+    margin: 1%;
+    border-radius: 3px;
+    padding: 10px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.50);
+
+    background-color: rgb(220, 220, 220);
+
+    text-align: justify;
+
+}
+
+.cadreLanding h3{
+    margin : 10px;
+
+}
+
+.landinglink{
+    font-style: bold, italic;
+    color: black;
+    float: right;
+
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.intro-message-mobile{
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    width : 100%;
+
+}
+
+
+.intro-message-mobile h3{
+    font-size: 18px;
+    font-style: italic;
+    
+}
+
+.mobile-button {
+    display: inline-block;
+    background-color: rgba(200,200,200,0.2);
+    border: none;
+    outline:none;
+    border-radius: 2px;
+}
+

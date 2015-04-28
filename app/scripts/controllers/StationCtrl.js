@@ -6,7 +6,7 @@ Stations.controller("StationCtrl", function($scope, $http){
 	$scope.isLoading = false;
 
 
-
+	//Fonction permettant de récupérer les stations dans la base de données
 	function getStations()
 	{
 		console.info("getting stations");
@@ -26,12 +26,8 @@ Stations.controller("StationCtrl", function($scope, $http){
 		})
 	}
 
-	$scope.setFalse = function(){
-    $scope.checkboxValue = false;
-}
-
-
 
 	getStations();
 });
+
 

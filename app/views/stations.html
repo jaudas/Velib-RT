@@ -1,43 +1,43 @@
 
-<div class = "cadre"  ng-controller="StationCtrl">
+<div class = "cadre" >
     <h1> Les stations </h1>
         <p> <i class="fa fa-search"></i>  Recherche </p>
 
+        <!-- Formulaire de selection -->
         <div class="row" id = "formulaireListe" >
 
-          <div class="col-md-6 " id ="saisie">
-            <form>
-              <input class="formInput" type="text" placeholder = "Name search " ng-model="search.name">
-              <input class="formInput" type="text" placeholder = "Address search " ng-model="search.address">
-              <input type="checkbox" ng-model="search.status" ng-checked="status == 'OPEN'" > Station Ouvertes uniquement</br/>
-       
-
-            </form>
-          </div>
-
-          <div class="col-md-6 ">
- 
-          </div>
+          <form>
+            <div class="col-md-6 " id ="saisie">
+                <input class="formInput" type="text" placeholder = "Name search " ng-model="search.name">
+                <input class="formInput" type="text" placeholder = "Address search " ng-model="search.address">
+            </div>
 
 
+            <div class="col-md-6 ">
+              <input type="checkbox" ng-model="search.status" ng-true-value="'OPEN'" ng-false-value="''"> Station Ouvertes uniquement</br/>
+              <input type="checkbox" ng-model="search.banking" ng-true-value="'true'" ng-false-value="''"> Avec Terminal de Paiement uniquement </br/>
+            </div>
+
+          </form>
 
         </div>  
+        <!-- Fin formulaire de selection -->
 
-        
 
-        <p> Les stations :</p>
+        <p> Les stations </p>
 
+        <!-- Résultats de la selection -->
         <div class ="stationUnit" ng-repeat = "station in stations | limitTo:50 | filter : search  " >
 
-          <span class="name">Name :  {{station.name}}</span>
+          <span class="name">Nom :  {{station.name}}</span>
 
-          <span ng-show="station.status=='CLOSED'" title ="Station fermée" style="color:red">
-                    <i class="fa fa-exclamation"></i>FERMEE </span>
+          <!-- On signale si la station est fermée -->
+          <span ng-show="station.status=='CLOSED'" title ="Station fermée" style="color:red"> <i class="fa fa-exclamation"></i>FERMEE </span>
 
-          
-           <span id = "star" ng-show="station.bonus==true" title ="Station Bonus" >
-                    <i class="fa fa-star"></i> </span>
+          <!-- On signale si la station est dite "bonus" -->
+           <span id = "star" ng-show="station.bonus==true" title ="Station Bonus" > <i class="fa fa-star"></i> </span>
 
+          <!-- Icones permettant de donner des informations sur la station -->
           <span class ="bikes"> 
 
             <span ng-show="station.banking==true" title ="Terminal de paiement" >
@@ -45,29 +45,30 @@
 
 
             <span ng-class ="{true:'unvailable', false:'available'}[station.available_bikes==0]" title ="Vélos disponibles à la station" >
-                    {{station.available_bikes}}     <i class="fa fa-bicycle"></i> </span>
+                    {{station.available_bikes}}   <i class="fa fa-bicycle"></i> </span>
 
-                  <span ng-class ="{true:'unvailable', false:'available'}[station.available_bike_stands==0]" title ="Places disponibles" >
-                    {{station.available_bike_stands}} <i class="fa fa-unlock-alt"></i></span>
+            <span ng-class ="{true:'unvailable', false:'available'}[station.available_bike_stands==0]" title ="Places disponibles" >
+              {{station.available_bike_stands}} <i class="fa fa-unlock-alt"></i></span>
 
             </span>
 
 
           <span class="address"> <br>{{station.address}}</span> 
 
+
+          <!-- Bouton permettant de dévoiler plus d'informations sur la station ainsi qu'un lien vers ses détails et une carte -->
           <span id="details" class="btn-floating" role="button" ng-click="showDetails =!showDetails" ><i class="fa fa-plus"></i></span>
 
             <div class="stationDetails" ng-class="{ 'hidden': !showDetails }" >
-                <span class="address"> Dernière mise à jour : {{station.last_update | ago }} 
-                </span> 
-                <span class="address"> <br>{{station.address}}</span> 
-                <a href="#/details/{{station.number}}">En savoir plus</a></div>
+                <span class="address"> Dernière mise à jour : {{station.last_update | ago}} </span> 
+                <span class="address">  <br> Total : {{station.bike_stands}} places </span> 
+
+                <!-- Lien vers la page de détails de la station -->
+                <a href="#/details/{{station.number}}">En savoir plus</a>
+              </div>
          </div> 
 
-
-
-
-
+         <!-- Fin des résultats -->
     </div> 
 
 

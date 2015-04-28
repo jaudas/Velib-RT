@@ -1,9 +1,12 @@
-<div class = "cadre"  ng-controller="MapCtrl">
+<div class = "cadre"  >
   <h1> Détail de la station </h1>
 
   <div class="stationUnit">
+
+    <!-- Caractéristiques de la station -->
+
     <div class="col-md-6 ">
-      <span class="name">Name :  {{stationDetails.name}}</span>  
+      <span class="name">Nom :  {{stationDetails.name}}</span>  
 
       <span ng-show="stationDetails.bonus==true" title ="Station fermée" style="color:red; text-align : center">
         <br>FERMEE </span>
@@ -26,23 +29,18 @@
 
         </span>
 
+        <div> <br>La station comporte {{stationDetails.bike_stands}} places, au total.</div>
+
 
         <div class="address"> <br>{{stationDetails.address}}</div>
 
-
-        <div class="address"> latitude : {{stationDetails.position.lat}}</div> 
-        <div class="address"> longitude : {{stationDetails.position.lng}} <br></div> 
-
-
       </div>
 
-
+      <!-- Affichage de la carte -->
       <div class="col-md-6 " >
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' id = "gmaps">
 
-        <ui-gmap-marker idKey='stationDetails.number' coords='stationDetails.position'>
-        </ui-gmap-marker>
-
+        <ui-gmap-marker idKey='marker.id' coords='marker.coords'></ui-gmap-marker>
         </ui-gmap-google-map>
     
       </div>

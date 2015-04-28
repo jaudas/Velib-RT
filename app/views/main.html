@@ -1,55 +1,85 @@
 <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
+<a name="about"></a>
+<div class="intro-header">
+    <!-- Affichage normal  -->
+    <div class="intro-message">
+          <h1>Vélib'RT</h1>
+          <h3>Trouver sa route, trouver son chemin.</h3>
+          <hr class="intro-divider">
 
-        <div class="intro-message">
-            <h1>Vélib'erté</h1>
-            <h3>Trouver sa route, trouver son chemin.</h3>
-            <hr class="intro-divider">
+          <ul class="list-inline intro-social-buttons">
+              <li>
+                  <a href="#/itineraire" class="btn btn-default btn-lg"><i class="fa fa-map"></i> Trouver un itinéraire </span></a>
+              </li>
+              <li>
+                  <a href="#/stations" class="btn btn-default btn-lg"><i class="fa fa-map"></i> Trouver une station </span></a>
+              </li>
 
-            <!-- PROVISOIRE EN ATTENDANT FORMULAIRE -->
-            <ul class="list-inline intro-social-buttons">
-                <li>
-                    <a href="#/itineraire" class="btn btn-default btn-lg"><i class="fa fa-map"></i> Trouver un itinéraire </span></a>
-                </li>
-                <li>
-                    <a href="#/stations" class="btn btn-default btn-lg"><i class="fa fa-map"></i> Trouver une station </span></a>
-                </li>
+          </ul>
+      </div>
 
-            </ul>
+
+      <!-- Affichage mobile, plus simple  -->
+      <div class = "intro-message-mobile">
+
+          <h1>Vélib'RT</h1>
+          <h3>L'information Vélib' en temps réel.</h3>
+          <hr class="intro-divider">
+
+          <button href="#/stations" class ="mobile-button">Stations</button>
+
+          <button href="#/itineraire" class ="mobile-button">Itineraire</button>
+
+
+      </div>
+
+</div>
+
+
+
+<div id = "presentation">
+
+    <h2 style ="text-align : center"> Les fonctionnalités </h2>
+
+
+    <div class="row" id ="containerLanding" >
+
+        
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3" >
+                <div class = "cadreLanding ">
+                <h3> Gestion d'itineraires </h3>
+                <p> A partir de l'API de Google Maps, nous vous proposons le meilleur itinéraire pour votre trajet entre deux stations. <br>Saisissez simplement les deux stations à l'aide du module d'autocomplétion, et nous calculons automatiquement quel chemin prendre à vélo pour faire le trajet le plus rapidement possible.   
+                <a class = "landinglink" href="#/itineraire"> >> </a> </p> 
+               </div>
         </div>
+       
 
-    </div>
-    <!-- /.intro-header -->
+       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <div class = "cadreLanding ">
+               <h3> Proposition de station </h3>
+               <p> Ici, vous pourrez trouver toutes les stations du services vélib en fonction de vos critères. Vous saurez donc si la station à laquelle vous souhaitez vous rendre dispose de points disponibles pour attacher votre vélo ou pour en emprunter. <br>Ne tombez plus jamais sur une station vide ou fermée ! 
+               <a class = "landinglink" href="#/stations"> >> </a>  </p>
 
-        <!-- /.content-section-a -->
+           </div>
+       </div>
 
-        <a  name="contact"></a>
-        <div class="banner">
+       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <div class = "cadreLanding ">
+               <h3> Statistiques générales </h3>
+               <p> Pour les plus curieux, ceux qui s'ennuient sur le net ou ceux qui se sont retrouvé sur ce site par hasard, cette page est l'opportunité d'en savoir plus sur l'entreprise, les vélos mis à disposition, les stations et l'ensemble des caractéristiques du service quotidien de location de vélo préféré des parisiens ! <a class = "landinglink" href="#/statistiques"> >> </i></a>
 
-            <div class="container">
+               </p>   
+            </div>
+       </div>
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h2>Connect to Start Bootstrap:</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="list-inline banner-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <div class = "cadreLanding ">
+                <h3> Informations </h3>
+                <p> Envie d'en savoir plus sur ce site et comment il fonctionne ? Et bien toutes les informations sont disponibles sur ce dernier onglet ! Attention, ce site est un projet étudiant et est encore en cours de finalisation. <br>Il pourra et sera mis à jour au fur et à mesure de son utilisation. 
+                <a class = "landinglink" href="#/info"> >> </a> </p> 
 
             </div>
-            <!-- /.container -->
+       </div>
+    </div>
 
-        </div>
-        <!-- /.banner -->
+</div>

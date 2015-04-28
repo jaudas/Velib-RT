@@ -1,0 +1,15 @@
+.statsUnit{
+
+	border-radius: 3px;
+	background-color: white;
+
+	margin-bottom: 15px;
+	padding: 10px 10px;
+
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20);
+
+	height: auto;
+	display: inline-block;
+	width: 100%;
+	
+}

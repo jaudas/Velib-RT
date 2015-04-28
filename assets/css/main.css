@@ -8,6 +8,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 }
 
+
 .container{
 	width: 100%;
 	height: 100%;
@@ -17,6 +18,48 @@ body, h1, h2, h3, h4, h5, h6 {
 .cadre{
 	padding-top: 100px;
 	padding-bottom: 30px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+
+.bouton-itin{
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+#formulaire-itin .col-xs-12, .col-md-12, .col-lg-5{
+
+	padding: 3%;
+}
+
+#generateDirection{
+	text-align: center;
+}
+
+#drawdirection{
+	text-align: center;
+	margin : 30px;
+}
+
+#arrow{
+	text-align: center;
+}
+
+#formulaire-itin{
+	background-color: white;
+	border-radius: 3px;
+	margin-bottom: 30px;
+
+	padding: 10px 10px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20);
+}
+
+.choixStation{
+	border : none;
+	border-bottom:1px solid #757575;
+	width: 100%;
+	margin-bottom: 10px;
 }
 
 
@@ -53,6 +96,12 @@ body, h1, h2, h3, h4, h5, h6 {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20);
 }
 
+
+.choix{
+	font-size: 8px;
+	overflow: scroll;
+
+}
 
 
 footer {
@@ -95,6 +144,30 @@ footer {
 #footer {
     position: fixed;
     margin: 0;
+}
+
+.attention {
+	font-style: bold;
+	color : red;
+	text-transform : uppercase;
+	margin: 2px;
+	text-align: center;
+}
+
+
+@media(min-device-width: 480px)
+{
+    .intro-message-mobile{
+        display: none;
+    }
+
+}
+
+@media(max-device-width: 480px)
+{
+    .intro-message{
+        display: none;
+    }
 }
 
 
